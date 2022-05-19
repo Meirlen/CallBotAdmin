@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "orders": {
+
+        // Allow only authenticated content owners access to their data
+        ".read": "auth != null",
+        ".write": "auth!= null",
+        //".write": "auth.token.admin === true",
+    }
+  }
+}

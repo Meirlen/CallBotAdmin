@@ -1,0 +1,16 @@
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore"
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDf1u34BFh4tRZIH2rbTLlBXf8z3kuW0Dg",
+  authDomain: "transportbot-a0b50.firebaseapp.com",
+  databaseURL: "https://transportbot-a0b50-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "transportbot-a0b50",
+  storageBucket: "transportbot-a0b50.appspot.com",
+  messagingSenderId: "24977711787",
+  appId: "1:24977711787:web:3f013457f7dfcce8f90dee",
+  measurementId: "G-P3H3E3TZ4B"
+};
+
+export const app = initializeApp(firebaseConfig);
+export const firestoreDb = getFirestore(app);

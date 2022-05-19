@@ -1,0 +1,48 @@
+// protos/order/order.proto
+
+syntax = "proto3";
+
+
+service OrderSvc {
+    rpc getAll (GetAllRequest) returns (OrderCollectionResponse);
+    rpc create (CreateRequest) returns (Order);
+}
+
+message Order {
+    string id = 1;
+    string name = 2;  
+    string area = 3;
+    string created = 4;
+    string createdAt = 5;
+    string from = 6;
+    string phone = 7;
+    string status = 8;
+    string to = 9;
+    string price = 10; 
+    string user_coment = 11;
+}
+
+message CreateRequest {
+    string name = 2;  
+    string area = 3;
+    string created = 4;
+    string createdAt = 5;
+    string from = 6;
+    string phone = 7;
+    string status = 8;
+    string to = 9; 
+    string price = 10; 
+    string user_coment = 11;
+}
+
+message GetAllRequest {
+    string page = 1;
+    string from = 2;
+    string to = 3;
+    string status = 4;
+    string limit = 5;
+}
+
+message OrderCollectionResponse {
+    repeated Order orderCollection = 1;
+}

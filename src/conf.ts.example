@@ -1,0 +1,1 @@
+export const GRPC_HOST = 'localhost'

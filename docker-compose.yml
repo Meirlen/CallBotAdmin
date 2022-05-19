@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+    orders:
+        build:
+            context: .
+        restart: "no"
+        ports:
+            - 3000:3000
