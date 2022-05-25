@@ -399,33 +399,33 @@ export default function OrderPage() {
                     <HeaderComponent email={user != null ? user.email : null}></HeaderComponent>
                     <div className='row align-left'>
                         <div className='col'>
-                            <select className="form-select custom-select d-inline-block m-2" id="country" required="" onChange={ (e) => { filter(e.target.value) }}>
+                            {/* <select className="form-select custom-select d-inline-block m-2" id="country" required="" onChange={ (e) => { filter(e.target.value) }}>
                                 <option value="all">Все заказы</option>
                                 <option value="new">Новые заказы</option>
                                 <option value="decline">Отменённый заказы</option>
                                 <option value="wait">Ожидающие заказы</option>
                                 <option value="accept">Принятые заказы</option>
-                            </select>
+                            </select> */}
                         </div>
-                        <div className='col'>
+                        {/* <div className='col'>
                             <select className="form-select custom-select d-inline-block m-2" id="country" required="" onChange={ (e) => { filterByDate(e.target.value) }}>
                                 <option value="all"></option>
                                 <option value="new_first">Сначала свежие</option>
                                 <option value="old_first">Сначала старые</option>
                             </select>
-                        </div>
-                        <div className='col'>
+                        </div> */}
+                        {/* <div className='col'>
                             <select className="form-select custom-select d-inline-block m-2" id="country" required="" onChange={ (e) => { setLimitNumber(e.target.value); sessionStorage.setItem('limit', e.target.value) }}>
                                 <option value="25">25</option>
                                 <option value="50">50</option>
                                 <option value="100">100</option>
                             </select>
-                        </div>
+                        </div> */}
                         <div className='col'>
-                            <button className='btn btn-primary m-2' onClick={ () => apllyFilters() }> Применить </button>
-                            <button className='btn btn-primary m-2' onClick={ () => testOrderGrpc() }> GRPC </button>
+                            {/* <button className='btn btn-primary m-2' onClick={ () => apllyFilters() }> Применить </button> */}
+                            {/* <button className='btn btn-primary m-2' onClick={ () => testOrderGrpc() }> GRPC </button> */}
                         </div>
-                        <div className='row col-12'>
+                        {/* <div className='row col-12'>
                             <div className='col'>
                                 <input className='form-select custom-select m-2' type={'date'} onChange={ (event) => {setFrom(event.target.value)}}></input>
                             </div>
@@ -435,7 +435,7 @@ export default function OrderPage() {
                             <div className='col'>
                                 <button className='btn btn-primary m-2' onClick={ () => testOrderGrpc() }> Отфильтровать </button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="row table-responsive p-3 b-brand-light-gray table-scroll">
                         <table className="table">
@@ -500,19 +500,12 @@ export default function OrderPage() {
                                 <div>
                                     <div className='row'>
                                         <div className='d-grid gap-2 col-6 mx-auto'>
-                                            <p>Откуда : </p>
                                             <button className='btn btn-light mb-1'  onClick={ () => {  copy(currentOrder.data.from); } } >{ currentOrder.data.from } <i className="bi bi-files float-end"></i></button>
-                                            <p>Куда : </p>
                                             <button className='btn btn-light mb-1' onClick={ () => { copy(currentOrder.data.to) } }>{ currentOrder.data.to }  <i className="bi bi-files float-end"></i></button>
-                                            <p>Пользовательский комментарий: {currentOrder.data.user_comment} </p>
-                                            <p>Платформа : </p>
-                                            <button className='btn btn-light mb-1' onClick={ () => { copy(currentOrder.data.area) } }>  { currentOrder.data.area } <i className="bi bi-files float-end"></i></button>
+                                            <button className='btn btn-light mb-1' onClick={ () => { copy(currentOrder.data.phone) } }>{ currentOrder.data.phone }  <i className="bi bi-files float-end"></i></button>
+                                
+                                            <p>Комментарий: <b>{currentOrder.data.user_comment}</b> </p>
                                             <label className='mb-1'>Статус</label>
-                                            <button type="button" 
-                                                onClick={ () => { setCurrentStatus('wait') } } 
-                                            className={
-                                            "btn btn-outline-warning mb-1 " + getActiveButton(currentStatus, 'wait') 
-                                            }>Ожидание</button>
                                             <button type="button"
                                                 onClick={ () => { setCurrentStatus('accept') } } 
                                             className={
@@ -523,10 +516,6 @@ export default function OrderPage() {
                                             className={
                                             "btn btn-outline-danger mb-1 " + getActiveButton(currentStatus, 'decline') 
                                             }>Отмена</button>
-                                            <button className={"btn btn-outline-dark mb-1 " + getActiveButton(currentStatus, 'cancel-by-user')}>Отменено пользователем</button>
-                                            <input className='text-center' value={comment}  type="text" placeholder='Введите комментарий' onChange={ (e) => { 
-                                                setComment(e.target.value);
-                                            } } />
                                         </div>
                                     </div>
                                 </div> : null

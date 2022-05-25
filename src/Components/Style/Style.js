@@ -8,7 +8,7 @@ export const defaultStylesheet= `
     }
 
     .b-brand-color-dark {
-        background-color: black;
+        background-color: #000000;
     }
     
     .b-brand-color-darken {
