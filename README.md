@@ -17,9 +17,10 @@ firebase deploy
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+If neccesary you need instal npm
+### `npm install`
 
 In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
