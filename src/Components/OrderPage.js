@@ -376,7 +376,7 @@ export default function OrderPage() {
                         
                     } }
                 >
-                    <td>{ item.data.createdAt.toDate().getHours() + ":" + item.data.createdAt.toDate().getMinutes() }</td>
+                    {/* <td>{ item.data.createdAt.toDate().getHours() + ":" + item.data.createdAt.toDate().getMinutes() }</td> */}
                     <td>{item.data.from}</td>
                     <td>{item.data.to}</td>
                     <td>{item.data.price}</td>
