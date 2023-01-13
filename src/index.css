@@ -1,13 +1,212 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.main-wrapper {
+    padding: 0 !important;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    overflow: hidden;
+    max-height: 100vh;
+}
+
+.pagination-buttons {
+    width: 100% !important;
+}
+
+.content-wrapper {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100vh;
+}
+
+.sidebar-logo {
+    width: 80%;
+    margin: 20px 0;
+}
+
+.ant-layout-sider-children {
+    position: relative;
+}
+
+.sidebar-contact {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding-bottom: 60px;
+}
+
+.table-responsive {
+    height: max-content !important;
+    max-height: max-content !important;
+}
+
+.order-action-btns {
+    display: flex;
+}
+
+.order-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.order-action-btn:nth-child(1) {
+    margin-right: 5px;
+}
+
+.order-routes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 10px;
+}
+
+.order-route-arrow {
+    margin-right: 8px;
+}
+
+.modal-title {
+    font-size: 30px;
+}
+
+.edit-order-btns {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+
+.edit-order-btns button:nth-child(1) {
+    margin-right: 5px;
+    display: block;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.ant-table-content table {
+    min-width: 700px;
+    padding: 0 20px;
+}
+
+.dropdown {
+    margin-left: 10px;
+}
+
+.time-col {
+    width: 90px;
+}
+
+
+.table-address {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.orders-page-filter {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+.orders-page-filter h5 {
+    margin: 0 10px 0 0;
+}
+
+.orders-page-filter-by-status {
+    min-width: 150px;
+}
+
+.actions-col {
+    width: 100px;
+}
+
+.modal-label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.about-driver-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.modal-inputs-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.ant-form-item {
+    margin-bottom: 10px !important;
+}
+
+.modal-inputs-group .modal-label {
+    margin-top: 0;
+}
+
+.filter-title {
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.filter-item {
+    margin-left: 10px;
+}
+
+.actions-col-history {
+    width: 50px;
+}
+
+.date-filter-order-history {
+    margin-left: 10px;
+}
+
+.orders-history-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    line-height: 0 !important;
+}
+
+.orders-history-table-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px !important;
+}
+
+@media(max-width: 800px) {
+    .orders-history-page-filter {
+        flex-direction: column;
+    }
+
+    .orders-history-page-filter-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }

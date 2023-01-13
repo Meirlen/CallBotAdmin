@@ -1,5 +1,5 @@
 
-export const defaultStylesheet= `
+export const defaultStylesheet = `
     w-auto {
         width:auto !important;
     }
@@ -180,16 +180,11 @@ export const defaultStylesheet= `
         height: -webkit-fill-available;
         max-height: 100vh;
         overflow-x: auto;
-        overflow-y: hidden;
     }
     .f-18{
         font-size:18px;
     }
   
-    tbody {
-        overflow-y: auto;    /* Trigger vertical scroll    */
-        overflow-x: hidden;  /* Hide the horizontal scroll */
-    }
 
     tr {
         width: 100%;
@@ -197,16 +192,6 @@ export const defaultStylesheet= `
         table-layout: fixed;
     }
         
-    table{
-         max-height: 70vh;
-        display: block;
-    }
-    tbody{
-        overflow-y: scroll;      
-        max-height: calc(100vh - 260px);
-        width: 81%;
-        position: absolute;
-    }
 
     .table-scroll{
         height:calc(100vh - 260px);
@@ -221,5 +206,10 @@ export const defaultStylesheet= `
 
     #logoImage {
         max-width:240px
+    }
+   
+    .sidebar-support {
+        text-align: center;
+        font-size: 15px !important;
     }
 `
